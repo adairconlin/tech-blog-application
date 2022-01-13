@@ -9,10 +9,20 @@ router.get("/", withAuth, (req, res) => {
             user_id: req.session.user_id
         },
         attributes: ["id", "title", "created_at"],
-        incude: {
-            model: User,
-            attributes: ["username"]
-        }
+        include: [
+            {
+                model: Comment,
+                attributes: ["comment_text", "post_id", "user_id", "created_at"],
+                include: {
+                    model: User,
+                    attributes: ["username"]
+                }
+            },
+            {
+                model: User,
+                attributes: ["username"]
+            }
+        ]
     })
         .then(dbPostData => {
             const posts = dbPostData.map(post => post.get({ plain: true }));

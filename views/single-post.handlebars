@@ -1,3 +1,13 @@
-{{> post-info post}}
-
+<article>
+    <div>
+        <h1>{{post.title}}</h1>
+    </div>
+    <div>
+        by {{post.user.username}} on
+        {{created_at}}
+        |
+        {{post.comments.length}} comment(s)
+    </div>
+</article>
+<br>
 {{> comments post.comments}}
