@@ -1,11 +1,11 @@
 <article>
     <div>
-        <a href="/post/{{id}}">{{title}}</a>
+        <a href="/post/{{id}}" class="post-title myFont-sans sans-bold">{{title}}</a>
     </div>
-    <div>
-        by {{user.username}} on
+    <div class="post-meta">
+        <p class=" myFont-serif">by <span class="info-green">{{user.username}}</span> on
         {{created_at}}
-        |
-        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+        |</p>
+        <a href="/post/{{id}}" class="info-green myFont-serif"> {{comments.length}} comment(s)</a></p>
     </div>
 </article>

@@ -1,3 +1,154 @@
-body {
-    background-color: lightcoral;
+:root {
+    --plain-white: #ffffff;
+    --muted-green: #7fa175;
+    --calming-orange: #c57e4e;
+    --blue-grey: #5c5e6d;
+    --dark-grey: #3d3f4b;
+    --shadow: ;
 }
+
+.myFont-serif {
+    font-family: fairplex-wide, serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.myFont-sans {
+    font-family: semplicitapro, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.sans-bold {
+    font-style: normal;
+}
+
+.sans-medium {
+    font-weight: 100;
+    font-style: normal;
+}
+
+ /* GENERAL STYLING */
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
+
+ a {
+     text-decoration: none;
+ }
+
+ button:hover {
+     cursor: pointer;
+ }
+
+body {
+    background-color: var(--blue-grey);
+    display: flex;
+    justify-content: center;
+}
+
+/* MAIN.HANDLEBARS */
+.main {
+    background-color: var(--dark-grey);
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100vh;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5vw 2.8vw;
+}
+
+footer {
+    text-align: center;
+    color: var(--muted-green);
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.main header h1 a {
+    color: var(--muted-green);
+    font-size: 3vw;
+}
+
+.main header nav a {
+    font-size: 1.2vw;
+    color: var(--plain-white);
+    margin-right: 2vw;
+}
+
+.cut-out {
+    background-color: var(--blue-grey);
+    border-radius: 1.5vw;
+    padding: .8vw 2vw;
+    box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.4) inset, 0 6px 20px 0 rgba(78, 29, 29, 0.19) inset;
+}
+
+.small-cut {
+    padding: 1.3vw 2vw;
+}
+
+.main header nav button {
+    background-color: var(--blue-grey);
+    border: none;
+    color: var(--plain-white);
+    font-size: 1.2vw;
+    border-left: 2px solid white;
+    padding-left: 2vw;
+}
+
+/* HOMEPAGE */
+main {
+    padding: 0vw 6vw;
+}
+
+main .homepage h1 {
+    font-size: 4vw;
+    color: var(--calming-orange);
+    border-bottom: 5px solid var(--plain-white);
+}
+
+ol {
+    color: var(--calming-orange);
+    font-size: 24px;
+    margin-top: 40px;
+}
+
+ol article, ol article div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li a, li p {
+    color: var(--plain-white);
+    vertical-align: text-bottom;
+}
+
+.info-green {
+    color: var(--muted-green);
+}
+
+.post-title {
+    font-size: 48px;
+    transition: .5s ease;
+}
+
+.post-title:hover {
+    color: var(--muted-green);
+}
+
+
+.post-meta p, .post-meta a {
+    font-size: 20px;
+    line-height: 95px;
+    margin-left: 15px;
+}
+
+/* POSTS */

@@ -5,29 +5,35 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tech Blog</title>
+        <link rel="stylesheet" href="https://use.typekit.net/ftb1spu.css">
+        <link rel="stylesheet" href="https://use.typekit.net/ftb1spu.css">
         <link rel="stylesheet" href="/stylesheets/style.css" />
     </head>
     <body>
-        <div>
+        <div class="main">
             <header>
-                <h1><a href="/">Tech Blog</a></h1>
+                <div class="cut-out">
+                    <h1 class="myFont-serif"><a href="/">Tech Blog</a></h1>
+                </div>
                 <nav>
-                    {{#if loggedIn}}
-                    <a href="/dashboard">dashboard</a>
-                    <button id="logout">logout</button>
-                    {{else}}
-                    <a href="/login">login</a>
-                    {{/if}}
+                    <div class="cut-out small-cut">
+                        {{#if loggedIn}}
+                        <a href="/dashboard" class="myFont-sans sans-medium">DASHBOARD</a>
+                        <button id="logout" class="myFont-sans sans-medium">LOGOUT</button>
+                        {{else}}
+                        <a href="/login">LOGIN</a>
+                        {{/if}}
+                    </div>
                 </nav>
             </header>
+            <main>
+                {{{ body }}}
+            </main>
+            <footer class="myFont-serif">Thanks for visiting!</footer>
         </div>
-        <main>
-            {{{ body }}}
-        </main>
-        <footer>Thanks for visiting!</footer>
 
-        {{#if loggedIn}}
-        <script src="/javascript/logout.js"></script>
-        {{/if}}
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
     </body>
 </html>

@@ -1,7 +1,11 @@
-<ol>
-    {{#each posts as |post|}}
-    <li>
-        {{> post-info post}}
-    </li>
-    {{/each}}
-</ol>
+<div class="homepage myFont-sans">
+    <h1>RECENT BLOGS</h1>
+
+    <ol>
+        {{#each posts as |post|}}
+        <li>
+            {{> post-info post}}
+        </li>
+        {{/each}}
+    </ol>
+</div>
