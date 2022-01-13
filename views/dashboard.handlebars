@@ -16,7 +16,17 @@
     <ol>
         {{#each posts as |post|}}
         <li>
-            {{> post-info post}}
+            <article>
+                <div>
+                    <a href="/dashboard/edit/{{post.id}}">{{title}}</a>
+                </div>
+                <div>
+                    by {{user.username}} on
+                    {{created_at}}
+                    |
+                    <a href="/dashboard/edit/{{post.id}}">{{comments.length}} comment(s)</a>
+                </div>
+            </article>
             <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
         </li>
         {{/each}}
