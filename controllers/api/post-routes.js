@@ -24,12 +24,26 @@ router.get("/:id", (req, res) => {
         where: {
             id: req.params.id
         },
-        include: {
+        include: [{
             model: User,
             attributes: ["username"]
-        }
+        },
+        {
+            model: Comment,
+            attributes: ["comment_text"],
+            include: {
+                model: User,
+                attributes: ["username"]
+            }
+        }]
     })
-    .then(dbPostData => res.json(dbPostData))
+    .then(dbPostData => {
+        if(!dbPostData) {
+            res.status(404).json({ message: "No post found with this id" });
+            return;
+        }
+        res.json(dbPostData);
+    })
     .catch(err => {
         console.log(err);
         res.json(500).json(err);
@@ -50,7 +64,7 @@ router.post("/", (req, res) => {
 });
 
 //PUT update a post
-router.post("/:id", (req, res) => {
+router.put("/:id", (req, res) => {
     Post.update(
         {
             title: req.body.title
@@ -72,6 +86,26 @@ router.post("/:id", (req, res) => {
                 console.log(err);
                 res.status(500).json(err);
             });
+});
+
+//DELETE a post
+router.delete("/:id", (req, res) => {
+    Post.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+        .then(dbPostData => {
+            if(!dbPostData) {
+                res.status(400).json({ message: "No post found with this id" });
+                return;
+            }
+            res.json(dbPostData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
 });
 
 module.exports = router;
