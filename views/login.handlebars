@@ -1,33 +1,38 @@
-    <form class="login-form">
+<div class="login-page">
+    <form class="login-form cut-out myFont-sans">
+    <h1>LOG IN</h1>
         <div>
-            <label for="email-login">email:</label>
-            <input type="text" id="email-login" />
+            <label for="email-login" class="myFont-serif">email:</label>
+            <input type="text" id="email-login" class="myFont-sans sans-medium" />
         </div>
         <div>
-            <label for="password-login">password:</label>
-            <input type="password" id="password-login" />
+            <label for="password-login" class="myFont-serif">password:</label>
+            <input type="password" id="password-login" class="myFont-sans sans-medium" />
         </div>
-        <div>
-            <button type="submit">login</button>
-        </div>
-    </form>
-
-    <form class="signup-form">
-        <div>
-            <label for="username-signup">username:</label>
-            <input type="text" id="username-signup" />
-        </div>
-        <div>
-            <label for="email-signup">email:</label>
-            <input type="text" id="email-signup" />
-        </div>
-        <div>
-            <label for="password-signup">password:</label>
-            <input type="password" id="password-signup" />
-        </div>
-        <div>
-            <button type="submit">signup</button>
+        <div class="log-btn">
+            <button type="submit" class="myFont-serif">login</button>
         </div>
     </form>
 
-    <script src="/javascript/login.js"></script>
+
+    <form class="signup-form cut-out myFont-sans">
+        <h1>SIGN UP</h1>
+        <div>
+            <label for="username-signup" class="myFont-serif">username:</label>
+            <input type="text" id="username-signup" class="myFont-sans sans-medium" />
+        </div>
+        <div>
+            <label for="email-signup" class="myFont-serif">email:</label>
+            <input type="text" id="email-signup" class="myFont-sans sans-medium" />
+        </div>
+        <div>
+            <label for="password-signup" class="myFont-serif">password:</label>
+            <input type="password" id="password-signup" class="myFont-sans sans-medium" />
+        </div>
+        <div class="log-btn">
+            <button type="submit" class="myFont-serif">signup</button>
+        </div>
+    </form>
+</div>
+
+<script src="/javascript/login.js"></script>

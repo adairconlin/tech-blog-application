@@ -82,6 +82,7 @@ footer {
     font-size: 1.2vw;
     color: var(--plain-white);
     margin-right: 2vw;
+    transition: .5 ease;
 }
 
 .cut-out {
@@ -102,6 +103,7 @@ footer {
     font-size: 1.2vw;
     border-left: 2px solid white;
     padding-left: 2vw;
+    transition: .5s ease;
 }
 
 /* HOMEPAGE */
@@ -115,6 +117,7 @@ main .homepage h1 {
     border-bottom: 5px solid var(--plain-white);
 }
 
+/* POSTS */
 ol {
     color: var(--calming-orange);
     font-size: 24px;
@@ -131,6 +134,12 @@ li a, li p {
     vertical-align: text-bottom;
 }
 
+.post-meta p, .post-meta a {
+    font-size: 20px;
+    line-height: 95px;
+    margin-left: 15px;
+}
+
 .info-green {
     color: var(--muted-green);
 }
@@ -144,11 +153,70 @@ li a, li p {
     color: var(--muted-green);
 }
 
-
-.post-meta p, .post-meta a {
-    font-size: 20px;
-    line-height: 95px;
-    margin-left: 15px;
+/* LOGIN */
+header nav div .login {
+    margin-right: 0;
 }
 
-/* POSTS */
+.login-page {
+    margin-top: 2.8vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-page form h1 {
+    color: var(--calming-orange);
+    font-size: 3.3vw;
+    margin-bottom: 3vw;
+}
+
+.login-form, .signup-form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding-top: 2vw;
+    padding-bottom: 2.5vw;
+    width: 45%;
+    height: 70vh;
+}
+
+.login-form div label, .signup-form div label {
+    color: var(--muted-green);
+    font-size: 2vw;
+}
+
+.login-form div input, .signup-form div input {
+    background-color: var(--dark-grey);
+    border: none;
+    font-size: 1.8vw;
+    color: var(--plain-white);
+    width: 100%;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.login-form div input:focus, .signup-form div input {
+    outline: none;
+}
+
+.login-page button {
+    color: white;
+    background-color: var(--calming-orange);
+    font-size: 2.2vw;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    transition: .5s ease;
+}
+
+.login-page button:hover {
+    background-color: var(--muted-green);
+}
+
+.log-btn {
+    margin-left: auto;
+    margin-top: auto;
+}
+
+
