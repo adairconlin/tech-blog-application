@@ -1,10 +1,9 @@
 <article>
-    <a href="/dashboard"> &larr; Back to dashboard</a>
-    <h2>Edit Post</h2>
+    <h2 class="dasboard-title myFont-sans">Edit Post</h2>
 
     <form class="edit-post-form">
         <div>
-            <input name = "post-title" type="text" value="{{post.title}}" />
+            <input name="post-title" type="text" class="post-title myFont-sans sans-medium" value="{{post.title}}" />
         </div>
         <div>
             {{post.vote_count}} {{post.vote_count}} by you on {{post.created_at}}
@@ -17,14 +16,13 @@
 
     <form class="comment-form">
         <div>
-            <textarea name="comment-body"></textarea>
+            <textarea name="comment-body" class="cut-out"></textarea>
         </div>
-
+        <div class="add-comment-btn-div">
+            <button type="submit" class="add-comment-btn">add comment</button>
+        </div>
+        
         {{> comments post.comments }}
-
-        <div>
-            <button type="submit">add comment</button>
-        </div>
     </form>
 </article>
 

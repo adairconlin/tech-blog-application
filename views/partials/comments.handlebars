@@ -1,12 +1,13 @@
-<div>
+<div class="single-post-section">
+    <h1 class="myFont-sans post-title">COMMENTS</h1>
     {{#each this}}
     <section>
-        <div>
+        <div class="comment-text myFont-sans sans-bold">
             {{comment_text}}
         </div>
         
-        <div>
-            by {{user.username}} on {{created_at}}
+        <div class="comment-meta myFont-serif">
+            by <span>{{user.username}}</span> on {{created_at}}
         </div>
     </section>
     {{/each}}

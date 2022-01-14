@@ -129,9 +129,8 @@ ol article, ol article div {
     flex-wrap: wrap;
 }
 
-li a, li p {
-    color: var(--plain-white);
-    vertical-align: text-bottom;
+li a {
+    color: white;
 }
 
 .post-meta p, .post-meta a {
@@ -273,12 +272,13 @@ section .new-post-form button:hover {
     background-color: var(--muted-green);
 }
 
-.dashboard-title {
-    font-size: 2.2vw;
+.sub-title {
+
+    font-size: 40px;
 }
 
 .dashboard-meta {
-    line-height: 65px;
+    line-height: 75px;
 }
 
 .dashboard-meta, .dashboard-meta span, .dashboard-meta .info-green {
@@ -296,3 +296,59 @@ section .new-post-form button:hover {
 .dashboard-section ol li {
     margin-bottom: 1.5vw;
 }
+
+/* SINGLE POST */
+
+.single-post-section h1 {
+    color: var(--calming-orange);
+    border-bottom: 5px solid var(--plain-white);
+}
+
+.post-info {
+    margin-top: 1vw;
+    color: white;
+    font-size: 1vw;
+}
+
+.comment-form textarea {
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 1vw;
+}
+
+.comment-form textarea:focus {
+    outline: none;
+}
+
+.add-comment-btn-div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.add-comment-btn {
+    align-self: end;
+    background-color: var(--calming-orange);
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1vw;
+    margin-top: 1vw;
+}
+
+.comment-text {
+    color: white;
+    font-size: 1.5vw;
+}
+
+.comment-meta {
+    color: var(--calming-orange);
+    font-size: .8vw;
+}
+
+.comment-meta span {
+    color: var(--muted-green);
+}
+
+

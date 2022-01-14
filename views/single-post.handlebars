@@ -1,8 +1,8 @@
-<article>
+<article class="single-post-section cut-out">
     <div>
-        <h1>{{post.title}}</h1>
+        <h1 class="myFont-sans post-title">{{post.title}}</h1>
     </div>
-    <div>
+    <div class="myFont-serif post-info">
         by {{post.user.username}} on
         {{created_at}}
         |
@@ -14,11 +14,11 @@
 {{#if loggedIn}}
 <form class="comment-form">
     <div>
-        <textarea name="comment-body"></textarea>
+        <textarea name="comment-body" class="cut-out myFont-sans sans-medium"></textarea>
     </div>
 
-    <div>
-        <button type="submit">add comment</button>
+    <div class="add-comment-btn-div">
+        <button type="submit" class="add-comment-btn myFont-serif">add comment</button>
     </div>
 </form>
 {{/if}}
