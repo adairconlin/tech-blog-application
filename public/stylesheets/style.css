@@ -36,11 +36,21 @@
  }
 
  a {
-     text-decoration: none;
+    text-decoration: none;
+ }
+
+ input:focus {
+    outline: none;
+ }
+
+ button {
+    transition: .5s ease;
+    border: none;
  }
 
  button:hover {
-     cursor: pointer;
+    cursor: pointer;
+    background-color: var(--muted-green);
  }
 
 body {
@@ -49,13 +59,17 @@ body {
     justify-content: center;
 }
 
+main {
+    margin-bottom: 4vw;
+}
+
 /* MAIN.HANDLEBARS */
 .main {
     background-color: var(--dark-grey);
     display: flex;
     flex-direction: column;
     width: 90%;
-    height: 100vh;
+    height: 100%;
     border-radius: 20px;
     box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -351,4 +365,41 @@ section .new-post-form button:hover {
     color: var(--muted-green);
 }
 
+/* EDIT POST */
+.edit-post-form input {
+    color: var(--plain-white);
+    width: 100%;
+    border: none;
+}
 
+.edit-post-form .edit-meta {
+    margin: 1vw 0;
+    color: var(--calming-orange);
+    font-size: 1vw;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.edit-post-form .edit-meta span {
+    color: var(--muted-green);
+}
+
+.edit-post-form button {
+    color: var(--plain-white);
+    background-color: var(--calming-orange);
+    padding: 5px 15px;
+    font-size: 1vw;
+    border-radius: 10px;
+    margin: 0 5px 1vw 5px;
+    transition: .5s ease;
+}
+
+.edit-post-form button:hover {
+    background-color: var(--muted-green);
+}
+
+.edit-title {
+    color: var(--calming-orange);
+    border-bottom: 5px solid var(--plain-white);
+    margin-bottom: 1vw;
+}

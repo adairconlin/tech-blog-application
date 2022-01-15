@@ -1,25 +1,25 @@
 <article>
-    <h2 class="dasboard-title myFont-sans">Edit Post</h2>
+    <h2 class="myFont-sans post-title edit-title">Edit Post</h2>
 
     <form class="edit-post-form">
         <div>
-            <input name="post-title" type="text" class="post-title myFont-sans sans-medium" value="{{post.title}}" />
+            <input name="post-title" type="text" class="post-title myFont-sans sans-medium cut-out" value="{{post.title}}" />
         </div>
-        <div>
-            {{post.vote_count}} {{post.vote_count}} by you on {{post.created_at}}
+        <div class="edit-meta myFont-serif">
+            {{post.vote_count}} {{post.vote_count}} by <span>you</span> on {{post.created_at}}
             |
-            <a href=="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
+            <a href=="/post/{{post.id}}"><span>{{post.comments.length}} comment(s)</span></a>
         </div>
-        <button type="submit">Save Post</button>
-        <button type="button" class="delete-post-btn">Delete Post</button>
+        <button type="submit" class="myFont-serif">Save Post</button>
+        <button type="button" class="delete-post-btn myFont-serif">Delete Post</button>
     </form>
 
     <form class="comment-form">
         <div>
-            <textarea name="comment-body" class="cut-out"></textarea>
+            <textarea name="comment-body" class="cut-out myFont-sans sans-medium"></textarea>
         </div>
         <div class="add-comment-btn-div">
-            <button type="submit" class="add-comment-btn">add comment</button>
+            <button type="submit" class="add-comment-btn myFont-serif">add comment</button>
         </div>
         
         {{> comments post.comments }}
