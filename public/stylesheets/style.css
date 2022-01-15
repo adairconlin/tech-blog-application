@@ -316,6 +316,12 @@ section .new-post-form button:hover {
 .single-post-section h1 {
     color: var(--calming-orange);
     border-bottom: 5px solid var(--plain-white);
+    margin-bottom: 1vw;
+}
+
+.single-post-section p {
+    color: white;
+    font-size: 1.5vw;
 }
 
 .post-info {
@@ -370,6 +376,10 @@ section .new-post-form button:hover {
     color: var(--plain-white);
     width: 100%;
     border: none;
+}
+
+.edit-post-form input[name="post-title"] {
+    font-size: 2vw;
 }
 
 .edit-post-form .edit-meta {
