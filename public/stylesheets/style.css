@@ -376,6 +376,7 @@ section .new-post-form button:hover {
     color: var(--plain-white);
     width: 100%;
     border: none;
+    margin-bottom: 1vw;
 }
 
 .edit-post-form input[name="post-title"] {
